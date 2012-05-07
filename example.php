@@ -13,7 +13,7 @@
  * ===================================
 */
 
-require_once(ROOT_DIR.'/system/classes/cache.class.php');
+require_once('cache.class.php');
 
 $cache = new MicroCache($_SERVER["REQUEST_URI"]);
 
