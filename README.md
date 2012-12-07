@@ -1,5 +1,10 @@
 # Installing #
-For install you must put this code to your files:
+For install you must downlaod 'cache.class.php' and include to your project
+
+
+# Usage #
+You can specify a script directly inside the cache configuration.  
+  
 ```php
 require_once('cache.class.php');
 
