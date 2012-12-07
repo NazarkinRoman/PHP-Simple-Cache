@@ -14,7 +14,7 @@
 */
 
 class MicroCache {
-  public $patch = 'patch/to/cache/dir/';
+  public $patch = 'cachetmp/';
   public $lifetime = 3600; // default value - 1 hour
   public $c_type = 'memcache';
   public $cache_on = true;
@@ -23,13 +23,16 @@ class MicroCache {
   private $memcache;
 
   function __construct($key) {
-    $this->memcache = new Memcache;
+    if(!class_exists('Memcache')) $this->c_type = 'file';
 
-    if ( !@ $this->memcache->connect('localhost', 11211))
-      $this->c_type = 'file';
+    if($this->c_type != 'file'){
+      $this->memcache = new Memcache;
+      if ( !@$this->memcache->connect('localhost', 11211))
+        $this->c_type = 'file';
+    }
 
-    $this->file = $this->patch . md5($key);
     $this->key = md5($key);
+    $this->file = $this->patch . $this->key;
   }
 
   public function check() {
@@ -90,4 +93,3 @@ class MicroCache {
   }
 
 }
-?>
