@@ -32,3 +32,8 @@ $cache->end();
 * Script using buffering output(ob_start(), ob_get_contents(), etc...).
 * Some parameters only work if they are assigned before function check().
 * Clear current or some cache by function clear().
+
+## Contributing
+
+Anyone and everyone is welcome to
+[contribute](/NazarkinRoman/PHP-Fast-cache/blob/master/CONTRIBUTING.md).
