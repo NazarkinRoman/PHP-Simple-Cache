@@ -80,20 +80,24 @@ class MicroCache {
 		$buffer = ob_get_contents();
 		ob_end_clean();
 
-		if ($this->cache_on) {
-			if ($this->c_type == 'file') {
-				$fp = @fopen($this->file, 'w') or die("Cannot create cache file : {$this->file}");
-				if ( @flock($fp, LOCK_EX)) {
-					fwrite($fp, $buffer);
-					fflush($fp);
-					flock($fp, LOCK_UN);
-					fclose($fp);
-				}
-			}
-			else
-				$this->memcache->set($this->key, $buffer, $this->memcache_compressed, $this->lifetime);
-		}
+		$this->cache_on and $this->write($buffer);
+
 		die ($buffer);
 	}
+
+	public write($buffer=''){
+		if ($this->c_type == 'file') {
+			$fp = @fopen($this->file, 'w') or die("Cannot create cache file : {$this->file}");
+			if ( @flock($fp, LOCK_EX)) {
+				fwrite($fp, $buffer);
+				fflush($fp);
+				flock($fp, LOCK_UN);
+				fclose($fp);
+			}
+		} else
+			$this->memcache->set($this->key, $buffer, $this->memcache_compressed, $this->lifetime);
+	}
+
+	
 
 }
