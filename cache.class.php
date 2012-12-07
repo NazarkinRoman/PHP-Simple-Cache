@@ -19,6 +19,7 @@ class MicroCache {
 	public $c_type = 'memcache';
 	public $cache_on = true;
 	public $is_cached = false;
+	public $memcache_compressed = false;
 	public $file, $key;
 	private $memcache;
 
@@ -90,7 +91,7 @@ class MicroCache {
 				}
 			}
 			else
-				$this->memcache->set($this->key, $buffer, false, $this->lifetime);
+				$this->memcache->set($this->key, $buffer, $this->memcache_compressed, $this->lifetime);
 		}
 		die ($buffer);
 	}
