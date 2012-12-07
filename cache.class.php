@@ -23,10 +23,13 @@ class MicroCache {
   private $memcache;
 
   function __construct($key) {
-    $this->memcache = new Memcache;
+    if(!class_exists('Memcache')) $this->c_type = 'file';
 
-    if ( !@ $this->memcache->connect('localhost', 11211))
-      $this->c_type = 'file';
+    if($this->c_type != 'file'){
+      $this->memcache = new Memcache;
+      if ( !@$this->memcache->connect('localhost', 11211))
+        $this->c_type = 'file';
+    }
 
     $this->file = $this->patch . md5($key);
     $this->key = md5($key);
