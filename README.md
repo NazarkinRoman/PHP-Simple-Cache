@@ -48,7 +48,7 @@ Thinking of implementing caching for your php application , Just in 6 simple (co
 	```
 
 # Usage
-Downlaod `cache.class.php` and include it to your project
+Downlaod `cache.class.php` and include it to your project  
 You can specify a script directly inside the cache configuration.  
   
 ```php
