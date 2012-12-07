@@ -82,8 +82,9 @@ class MicroCache {
 		if ($this->cache_on) {
 			if ($this->c_type == 'file') {
 				$fp = @fopen($this->file, 'w') or die("Cannot create cache file : {$this->file}");
-				if ( flock($fp, LOCK_EX)) {
+				if ( @flock($fp, LOCK_EX)) {
 					fwrite($fp, $buffer);
+					fflush($fp);
 					flock($fp, LOCK_UN);
 					fclose($fp);
 				}
