@@ -98,6 +98,11 @@ class MicroCache {
 			$this->memcache->set($this->key, $buffer, $this->memcache_compressed, $this->lifetime);
 	}
 
-	
+	public clear($key=false){
+		$key = $key === false ? $this->key : md5($key);
+		$file = $this->patch . $this->key . '.cache';
+		if ($this->c_type == 'file') @unlink($file);
+		else $this->memcache->delete($key);
+	}
 
 }
