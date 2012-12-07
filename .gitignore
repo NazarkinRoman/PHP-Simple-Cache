@@ -10,5 +10,5 @@ Desktop.ini
 *.psd
 $RECYCLE.BIN/
 
-#Cache temp dir
-cachetmp/
+#Cache files
+*.cache

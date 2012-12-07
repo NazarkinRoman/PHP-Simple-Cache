@@ -32,7 +32,7 @@ class MicroCache {
 		}
 
 		$this->key = md5($key);
-		$this->file = $this->patch . $this->key;
+		$this->file = $this->patch . $this->key . '.cache';
 	}
 
 	public function check() {
