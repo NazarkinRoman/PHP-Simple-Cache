@@ -31,8 +31,8 @@ class MicroCache {
         $this->c_type = 'file';
     }
 
-    $this->file = $this->patch . md5($key);
     $this->key = md5($key);
+    $this->file = $this->patch . $this->key;
   }
 
   public function check() {
