@@ -1,5 +1,5 @@
 # Installing #
-For install you must downlaod 'cache.class.php' and include to your project
+For install you must downlaod `cache.class.php` and include it to your project
 
 
 # Usage #
