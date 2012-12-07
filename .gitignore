@@ -1,0 +1,14 @@
+#OSX
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+#Windows
+Thumbs.db
+Desktop.ini
+*.psd
+$RECYCLE.BIN/
+
+#Cache temp dir
+cachetmp/
