@@ -22,7 +22,9 @@ class MicroCache {
 	public $file, $key;
 	private $memcache;
 
-	function __construct($key) {
+	function __construct($key=false) {
+		if($key===false) $key = $_SERVER["REQUEST_URI"];
+
 		if(!class_exists('Memcache')) $this->c_type = 'file';
 
 		if($this->c_type != 'file'){
