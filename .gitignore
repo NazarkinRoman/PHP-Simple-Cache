@@ -9,3 +9,6 @@ Thumbs.db
 Desktop.ini
 *.psd
 $RECYCLE.BIN/
+
+#Cache temp dir
+cachetmp/
