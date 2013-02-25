@@ -82,4 +82,4 @@ $cache->end();
 ## Contributing
 
 Anyone and everyone is welcome to
-[contribute](/blob/master/CONTRIBUTING.md).
+[contribute](/CONTRIBUTING.md).
