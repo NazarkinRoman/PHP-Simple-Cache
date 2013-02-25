@@ -3,7 +3,7 @@
 Thanks! There are plenty of ways you can help!  
 
 ### Report issues
-Check project and report your issue [here](https://github.com/NazarkinRoman/PHP-Fast-cache/issues)    
+Check project and report your issue [here](https://github.com/NazarkinRoman/PHP-Simple-cache/issues)    
 
 1. **Report your Idea**  
   If you have a any idea about design, programming, technology and other, please open an issue.
