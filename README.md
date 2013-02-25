@@ -82,4 +82,4 @@ $cache->end();
 ## Contributing
 
 Anyone and everyone is welcome to
-[contribute](/NazarkinRoman/PHP-Fast-cache/blob/master/CONTRIBUTING.md).
+[contribute](/blob/master/CONTRIBUTING.md).
