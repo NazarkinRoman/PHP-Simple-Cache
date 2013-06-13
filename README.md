@@ -1,4 +1,7 @@
-# Installing Memcached Server and access it with PHP
+# Installing Memcached Server and access it with PHP 
+[![Stories in Ready](http://githubkanban.herokuapp.com/huboard/NazarkinRoman/PHP-Simple-Cachepng)](http://huboard.com/NazarkinRoman/PHP-Simple-Cache/board)
+
+
 Thinking of implementing caching for your php application , Just in 6 simple (copy and paste) steps you can install and access Memcached Server.
 
 1. **Install libevent ,libmemcached and libmemcached devel (dependency)**  
